@@ -54,9 +54,7 @@ if(redirectSecondsString != null) {
 		<jsp:include page="jsp/header.jsp"></jsp:include>
 		
 		<div class="body-content">
-		<b><%=applicationName%></b> has moved to <a href="<%=applicationUrl%>"><%=applicationUrl%></a>
-		<br/><br/>
-		Please update your bookmarks.
+		<b><%=applicationName%></b> has moved to <a href="<%=applicationUrl%>"><%=applicationUrl%></a>. Please update your bookmarks.
 		
 		<% if(redirectSeconds != null) {%>
 			<br/><br/>
