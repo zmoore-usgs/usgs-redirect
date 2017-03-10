@@ -6,6 +6,25 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Redirecting Application Placeholder</name>
+	
+	<licenses>
+		<license>
+			<name>Public Domain</name>
+			<url>http://en.wikipedia.org/wiki/Public_domain_software</url>
+			<comments>
+				All work of the US Government enter into the Public Domain within
+				the United States.  Whether that work is public domain outside of
+				the United States depends on various factors.
+			</comments>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/USGS-CIDA/usgs-redirect</url>
+		<connection>scm:git:ssh://git@github.com/USGS-CIDA/usgs-redirect.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/USGS-CIDA/usgs-redirect.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 
 	<dependencies>
 		<dependency>
