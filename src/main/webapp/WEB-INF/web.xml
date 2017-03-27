@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-    <description>Redirect Application</description>
-    <display-name>Redirect Application</display-name>
-    <session-config>
-        <session-timeout>
-			30
-		</session-timeout>
-    </session-config>
-    
-    <security-constraint>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<description>Redirect Application</description>
+	<display-name>Redirect Application</display-name>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<servlet>
+		<servlet-name>redirect</servlet-name>
+		<jsp-file>/redirect.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/index.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/index.htm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/login.jsp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>redirect</servlet-name>
+		<url-pattern>/authenticate.jsp</url-pattern>
+	</servlet-mapping>
+
+	<security-constraint>
 		<web-resource-collection>
 			<web-resource-name>Entire Application</web-resource-name>
 			<url-pattern>/*</url-pattern>
@@ -17,8 +42,8 @@
 			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
 		</user-data-constraint>
 	</security-constraint>
-	
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
+
+	<welcome-file-list>
+		<welcome-file>redirect.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
